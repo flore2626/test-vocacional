@@ -16,7 +16,7 @@ body {
 
 .card {
     background: white;
-    max-width: 700px;
+    max-width: 750px;
     width: 100%;
     border-radius: 25px;
     padding: 45px;
@@ -24,10 +24,18 @@ body {
     box-shadow: 0 20px 50px rgba(0,0,0,.2);
 }
 
-h1, h2 {
-    font-size: 36px;
+h1 {
+    font-size: 38px;
     color: #003366;
     margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #002D72;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    text-align: left;
 }
 
 p {
@@ -40,52 +48,77 @@ button {
     margin-top: 30px;
     background: #FFD447;
     border: none;
-    padding: 15px 40px;
+    padding: 16px 45px;
     border-radius: 50px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: .3s;
     color: #002D72;
+    box-shadow: 0 5px 15px rgba(255, 212, 71, 0.4);
 }
 
 button:hover {
     transform: scale(1.05);
+    background: #ffe073;
 }
 
 .logo {
-    font-size: 70px;
-    margin-bottom: 25px;
+    font-size: 75px;
+    margin-bottom: 20px;
 }
 
 .progress-bar {
-    font-size: 14px;
+    font-size: 15px;
     color: #005BBB;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Control de flujo de las preguntas */
+.pregunta-block {
+    display: none;
+}
+
+.pregunta-block.activa {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
 }
 
 .opciones {
-    margin-top: 25px;
+    margin-top: 20px;
     text-align: left;
 }
 
 .opcion-label {
-    display: block;
+    display: flex;
+    align-items: center;
     background: #f4f7fc;
-    padding: 15px 20px;
-    margin-bottom: 12px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
     border-radius: 12px;
     cursor: pointer;
     font-size: 16px;
+    line-height: 1.4;
     transition: 0.2s;
+    color: #333;
     border: 2px solid transparent;
 }
 
 .opcion-label:hover {
     background: #e8f0fe;
+    border-color: #005BBB;
 }
 
 .opcion-label input {
     margin-right: 15px;
+    transform: scale(1.2);
+    accent-color: #002D72;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
