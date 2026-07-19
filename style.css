@@ -1,58 +1,93 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-background:linear-gradient(135deg,#002D72,#005BBB);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-padding:20px;
+body {
+    background: linear-gradient(135deg, #002D72, #005BBB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.card{
-background:white;
-max-width:700px;
-width:100%;
-border-radius:25px;
-padding:45px;
-text-align:center;
-box-shadow:0 20px 50px rgba(0,0,0,.2);
+.card {
+    background: white;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,.2);
 }
 
-h1{
-font-size:40px;
-color:#003366;
-margin-bottom:20px;
+h1, h2 {
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 20px;
 }
 
-p{
-font-size:18px;
-color:#555;
-line-height:1.7;
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
 }
 
-button{
-margin-top:40px;
-background:#FFD447;
-border:none;
-padding:18px 45px;
-border-radius:50px;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
+button {
+    margin-top: 30px;
+    background: #FFD447;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    color: #002D72;
 }
 
-button:hover{
-transform:scale(1.05);
+button:hover {
+    transform: scale(1.05);
 }
 
-.logo{
-font-size:70px;
-margin-bottom:25px;
+.logo {
+    font-size: 70px;
+    margin-bottom: 25px;
+}
+
+/* Estilos para las preguntas y opciones */
+.progress-bar {
+    font-size: 14px;
+    color: #005BBB;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.opciones {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.opcion-label {
+    display: block;
+    background: #f4f7fc;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+    border: 2px solid transparent;
+}
+
+.opcion-label:hover {
+    background: #e8f0fe;
+}
+
+.opcion-label input {
+    margin-right: 15px;
 }
