@@ -20,17 +20,17 @@
 <h1>Tu resultado</h1>
 
 <p>
-Tu perfil muestra habilidades relacionadas con:
+La licenciatura que más se relaciona con tus intereses es:
 </p>
 
 <br>
 
-<h2 id="carrera">
-Universidad Sotavento
+<h2 id="resultado">
+Calculando...
 </h2>
 
 <p style="margin-top:20px">
-Gracias por realizar nuestro test vocacional.
+En Universidad Sotavento encontrarás una formación profesional para desarrollar tus habilidades.
 </p>
 
 <button>
@@ -38,6 +38,16 @@ Solicita información
 </button>
 
 </div>
+
+
+<script>
+
+let carrera = localStorage.getItem("carrera");
+
+document.getElementById("resultado").innerHTML = carrera;
+
+</script>
+
 
 </body>
 </html>
