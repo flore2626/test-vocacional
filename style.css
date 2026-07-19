@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-shadow: border-box;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -59,7 +58,6 @@ button:hover {
     margin-bottom: 25px;
 }
 
-/* Estilos para las preguntas y opciones */
 .progress-bar {
     font-size: 14px;
     color: #005BBB;
