@@ -3,29 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas | Test Vocacional</title>
+    <title>Preguntas | Test Vocacional US</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="card">
-    <div class="progress-bar">Pregunta 1 de 3</div>
-    <h2 id="pregunta-texto">¿Qué área te llama más la atención?</h2>
+    <!-- Barra de progreso -->
+    <div class="progress-bar" id="progreso-texto">Pregunta 1 de 6</div>
     
-    <div class="opciones">
-        <label class="opcion-label">
-            <input type="radio" name="vocacion" value="contabilidad"> El control de presupuestos, auditorías y estados financieros.
-        </label>
-        <label class="opcion-label">
-            <input type="radio" name="vocacion" value="derecho"> Defender los derechos de las personas y analizar las leyes.
-        </label>
-        <label class="opcion-label">
-            <input type="radio" name="vocacion" value="sistemas"> Desarrollar software, administrar redes y bases de datos.
-        </label>
-    </div>
+    <form id="test-form">
+        <!-- Pregunta 1 -->
+        <div class="pregunta-block activa" id="p1">
+            <h2>1. En tu día a día o en un equipo de trabajo, ¿cuál de estas actividades disfrutas más hacer?</h2>
+            <div class="opciones">
+                <label class="opcion-label"><input type="radio" name="r1" value="administracion"> Planificar actividades, coordinar los recursos y liderar al equipo hacia una meta.</label>
+                <label class="opcion-label"><input type="radio" name="r1" value="arquitectura"> Diseñar espacios, dibujar bocetos o imaginar cómo mejorar la estructura de un lugar.</label>
+                <label class="opcion-label"><input type="radio" name="r1" value="contaduria"> Organizar presupuestos, revisar cuentas, calcular costos y analizar números.</label>
+                <label class="opcion-label"><input type="radio" name="r1" value="politicas"> Analizar problemas de la comunidad, proponer mejoras sociales y organizar servicios públicos.</label>
+                <label class="opcion-label"><input type="radio" name="r1" value="derecho"> Debatir con argumentos firmes, defender los derechos de otros y analizar reglamentos.</label>
+                <label class="opcion-label"><input type="radio" name="r1" value="pedagogia"> Explicar temas a los demás, diseñar dinámicas de aprendizaje y ayudar a otros a desarrollarse.</label>
+            </div>
+        </div>
 
-    <button id="btn-siguiente">Siguiente</button>
+        <!-- Pregunta 2 -->
+        <div class="pregunta-block" id="p2">
+            <h2>2. Si tuvieras que leer un libro o ver un documental por puro interés, ¿de qué temática elegirías?</h2>
+            <div class="opciones">
+                <label class="opcion-label"><input type="radio" name="r2" value="administracion"> Estrategias de negocios exitosos y cómo se manejan las grandes empresas internacionales.</label>
+                <label class="opcion-label"><input type="radio" name="r2" value="arquitectura"> La historia de los monumentos más icónicos, el urbanismo y las maravillas del diseño estructural.</label>
+                <label class="opcion-label"><input type="radio" name="r2" value="contaduria"> El funcionamiento de la economía mundial, las auditorías financieras y los sistemas de impuestos.</label>
+                <label class="opcion-label"><input type="radio" name="r2" value="politicas"> Políticas gubernamentales, administración del Estado y relaciones diplomáticas entre países.</label>
+                <label class="opcion-label"><input type="radio" name="r2" value="derecho"> Grandes juicios de la historia, la aplicación de la justicia y cómo funcionan los tribunales.</label>
+                <label class="opcion-label"><input type="radio" name="r2" value="pedagogia"> Modelos de educación innovadores, psicología del desarrollo infantil y técnicas de enseñanza.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta-block" id="p3">
+            <h2>3. ¿Cuál de los siguientes desafíos profesionales te parecería más interesante resolver?</h2>
+            <div class="opciones">
+                <label class="opcion-label"><input type="radio" name="r3" value="administracion"> Hacer que una empresa que está perdiendo dinero se vuelva eficiente y multiplique sus ganancias.</label>
+                <label class="opcion-label"><input type="radio" name="r3" value="arquitectura"> Proyectar un complejo habitacional sustentable que aproveche la luz y el espacio al máximo.</label>
+                <label class="opcion-label"><input type="radio" name="r3" value="contaduria"> Auditar la contabilidad de una corporación para asegurar que sus estados financieros estén impecables.</label>
+                <label class="opcion-label"><input type="radio" name="r3" value="politicas"> Diseñar un programa de desarrollo social o dirigir una secretaría de gobierno de manera transparente.</label>
+                <label class="opcion-label"><input type="radio" name="r3" value="derecho"> Estudiar a fondo un caso legal complejo para armar una defensa invencible en un juicio.</label>
+                <label class="opcion-label"><input type="radio" name="r3" value="pedagogia"> Crear programas educativos interactivos para capacitar personal o guiar a estudiantes con rezago.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta-block" id="p4">
+            <h2>4. ¿Qué habilidad consideras que destaca más en tu personalidad o te gustaría perfeccionar?</h2>
+            <div class="opciones">
+                <label class="opcion-label"><input type="radio" name="r4" value="administracion"> Visión estratégica, liderazgo, delegación de tareas y toma de decisiones bajo presión.</label>
+                <label class="opcion-label"><input type="radio" name="r4" value="arquitectura"> Creatividad visual, orientación espacial, destreza manual o manejo de proporciones geométricas.</label>
+                <label class="opcion-label"><input type="radio" name="r4" value="contaduria"> Gran atención al detalle, precisión matemática, orden y un pensamiento analítico muy estructurado.</label>
+                <label class="opcion-label"><input type="radio" name="r4" value="politicas"> Capacidad de negociación, diplomacia, visión del bien común y comprensión de sistemas institucionales.</label>
+                <label class="opcion-label"><input type="radio" name="r4" value="derecho"> Excelente expresión verbal y escrita, gusto por la lectura profunda, persuasión y sentido ético.</label>
+                <label class="opcion-label"><input type="radio" name="r4" value="pedagogia"> Paciencia, empatía profunda, facilidad de palabra y vocación por guiar y aconsejar a los demás.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta-block" id="p5">
+            <h2>5. Si pudieras integrarte hoy mismo a un proyecto escolar o comunitario, ¿en cuál encajarías mejor?</h2>
+            <div class="opciones">
+                <label class="opcion-label"><input type="radio" name="r5" value="administracion"> Ser el director del proyecto, asignando presupuestos, tiempos y metas para todo el equipo.</label>
+                <label class="opcion-label"><input type="radio" name="r5" value="arquitectura"> Coordinar la maqueta, los planos de construcción y la estética visual de la presentación.</label>
+                <label class="opcion-label"><input type="radio" name="r5" value="contaduria"> Llevar el control exacto de los gastos, costos de materiales y balances financieros del proyecto.</label>
+                <label class="opcion-label"><input type="radio" name="r5" value="politicas"> Gestionar los permisos con las autoridades del plantel y armar el plan para beneficiar a la comunidad.</label>
+                <label class="opcion-label"><input type="radio" name="r5" value="derecho"> Redactar el contrato, revisar el reglamento interno y asegurar que todo cumpla con las normas legales.</label>
+                <label class="opcion-label"><input type="radio" name="r5" value="pedagogia"> Encargarte de la capacitación del equipo y diseñar el material didáctico para exponer las ideas.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta-block" id="p6">
+            <h2>6. Al imaginar tu espacio de trabajo ideal a futuro, ¿cómo se ve?</h2>
+            <div class="opciones">
+                <label class="opcion-label"><input type="radio" name="r6" value="administracion"> En oficinas corporativas gestionando organizaciones o dirigiendo tu propia empresa comercial.</label>
+                <label class="opcion-label"><input type="radio" name="r6" value="arquitectura"> En un estudio de diseño alternando con visitas a obras de construcción y supervisión en campo.</label>
+                <label class="opcion-label"><input type="radio" name="r6" value="contaduria"> En despachos de consultoría financiera, departamentos fiscales o áreas de auditoría interna.</label>
+                <label class="opcion-label"><input type="radio" name="r6" value="politicas"> En dependencias del gobierno, partidos políticos, ONGs o centros de planeación pública.</label>
+                <label class="opcion-label"><input type="radio" name="r6" value="derecho"> En juzgados, notarías públicas, tribunales o en tu propio bufete de asesoría jurídica.</label>
+                <label class="opcion-label"><input type="radio" name="r6" value="pedagogia"> En instituciones educativas, departamentos de recursos humanos o centros de orientación escolar.</label>
+            </div>
+        </div>
+    </form>
+
+    <button id="btn-siguiente">Siguiente Pregunta</button>
 </div>
 
 <script src="script.js"></script>
