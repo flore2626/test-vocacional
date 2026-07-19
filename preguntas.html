@@ -1,71 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Test Vocacional | Preguntas</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas | Test Vocacional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="card">
+    <div class="progress-bar">Pregunta 1 de 3</div>
+    <h2 id="pregunta-texto">¿Qué área te llama más la atención?</h2>
+    
+    <div class="opciones">
+        <label class="opcion-label">
+            <input type="radio" name="vocacion" value="contabilidad"> El control de presupuestos, auditorías y estados financieros.
+        </label>
+        <label class="opcion-label">
+            <input type="radio" name="vocacion" value="derecho"> Defender los derechos de las personas y analizar las leyes.
+        </label>
+        <label class="opcion-label">
+            <input type="radio" name="vocacion" value="sistemas"> Desarrollar software, administrar redes y bases de datos.
+        </label>
+    </div>
 
-<h1>Pregunta 1</h1>
-
-<p>
-¿Qué actividad disfrutas más?
-</p>
-
-<br>
-
-<label>
-<input type="radio" name="pregunta1" value="Derecho">
-Ayudar a las personas y defender ideas
-</label>
-
-<br><br>
-
-<label>
-<input type="radio" name="pregunta1" value="Administración">
-Organizar proyectos y dirigir equipos
-</label>
-
-<br><br>
-
-<label>
-<input type="radio" name="pregunta1" value="Pedagogía">
-Enseñar y apoyar el aprendizaje
-</label>
-
-<br><br>
-
-<label>
-<input type="radio" name="pregunta1" value="Arquitectura">
-Diseñar y crear espacios
-</label>
-
-<br><br>
-
-<label>
-<input type="radio" name="pregunta1" value="Contaduría">
-Trabajar con números y análisis financiero
-</label>
-
-<br>
-
-<button onclick="calcularResultado()">
-Siguiente
-</button>
-
+    <button id="btn-siguiente">Siguiente</button>
 </div>
 
-
 <script src="script.js"></script>
-
 </body>
 </html>
