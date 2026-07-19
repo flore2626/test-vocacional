@@ -1,53 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Resultado | Test Vocacional</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Resultado | Test Vocacional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="card">
+    <div class="logo">🎉</div>
+    <h1>¡Test Completado!</h1>
+    <p>Según tus respuestas, tu perfil ideal está enfocado en:</p>
+    
+    <h2 id="carrera-resultado" style="margin-top: 20px; color: #005BBB;">Procesando tu perfil...</h2>
+    
+    <p style="margin-top: 20px;">
+        Acércate a las oficinas de admisiones de la <strong>Universidad Sotavento</strong> para conocer más sobre tu plan de estudios.
+    </p>
 
-<div class="logo">🎓</div>
-
-<h1>Tu resultado</h1>
-
-<p>
-La licenciatura que más se relaciona con tus intereses es:
-</p>
-
-<br>
-
-<h2 id="resultado">
-Calculando...
-</h2>
-
-<p style="margin-top:20px">
-En Universidad Sotavento encontrarás una formación profesional para desarrollar tus habilidades.
-</p>
-
-<button>
-Solicita información
-</button>
-
+    <a href="index.html"><button>Volver a empezar</button></a>
 </div>
-
-
-<script>
-
-let carrera = localStorage.getItem("carrera");
-
-document.getElementById("resultado").innerHTML = carrera;
-
-</script>
-
 
 </body>
 </html>
