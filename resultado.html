@@ -3,25 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Resultado | Test Vocacional</title>
+    <title>Tu Resultado | Test Vocacional US</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="card">
-    <div class="logo">🎉</div>
+    <div class="logo" id="resultado-icono">🎉</div>
     <h1>¡Test Completado!</h1>
-    <p>Según tus respuestas, tu perfil ideal está enfocado en:</p>
+    <p style="margin-bottom: 10px;">De acuerdo con tus respuestas, tu perfil ideal se inclina hacia la carrera de:</p>
     
-    <h2 id="carrera-resultado" style="margin-top: 20px; color: #005BBB;">Procesando tu perfil...</h2>
+    <!-- Aquí aparecerá el nombre de la carrera dinámica -->
+    <h2 id="carrera-resultado" style="text-align: center; font-size: 32px; color: #005BBB; margin-bottom: 20px; font-weight: 700;">
+        Calculando...
+    </h2>
     
-    <p style="margin-top: 20px;">
-        Acércate a las oficinas de admisiones de la <strong>Universidad Sotavento</strong> para conocer más sobre tu plan de estudios.
+    <p id="descripcion-resultado" style="margin-bottom: 30px; font-size: 16px; color: #666; padding: 0 10px;">
+        Cargando descripción de tu perfil vocacional...
+    </p>
+    
+    <p style="margin-top: 15px; font-weight: bold; color: #002D72;">
+        ¡Inicia tu futuro hoy en la Universidad de Sotavento!
     </p>
 
-    <a href="index.html"><button>Volver a empezar</button></a>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html"><button style="background: #e4eaf5; color: #002D72; box-shadow: none;">Volver a realizar</button></a>
+    </div>
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const carrera = localStorage.getItem("carreraFinal") || "administracion";
+    const titulo = document.getElementById("carrera-resultado");
+    const descripcion = document.getElementById("descripcion-resultado");
+    const icono = document.getElementById("resultado-icono");
+
+    // Diccionario de textos personalizados según la carrera ganadora
+    const infoCarreras = {
+        administracion: {
+            titulo: "Licenciatura en Administración",
+            icono: "💼",
+            desc: "Posees habilidades naturales para organizar recursos, liderar grupos humanos y diseñar estrategias eficientes. Tu perfil combina perfectamente con la gestión corporativa y la creación de empresas exitosas."
+        },
+        arquitectura: {
+            titulo: "Licenciatura en Arquitectura",
+            icono: "📐",
+            desc: "Tu mente destaca en la creatividad, el diseño visual y la organización de espacios tridimensionales. Tienes la sensibilidad estética e ingenio para proyectar y construir obras funcionales que impacten a la sociedad."
+        },
+        contaduria: {
+            titulo: "Licenciatura en Contaduría",
+            icono: "📊",
+            desc: "Tu gran atención al detalle, sentido del orden y gusto por el análisis analítico numérico te convierten en el candidato ideal para el control financiero, las auditorías fiscales y la planeación de presupuestos estratégicos."
+        },
+        politicas: {
+            titulo: "Licenciatura en Ciencias Políticas y Administración Pública",
+            icono: "🏛️",
+            desc: "Te interesan profundamente los problemas sociales y posees una visión orientada al bien común. Tienes madera para diseñar proyectos comunitarios, formular políticas de estado y coordinar dependencias públicas de manera eficaz."
+        },
+        derecho: {
+            titulo: "Licenciatura en Derecho",
+            icono: "⚖️",
+            desc: "Destacas por tu capacidad crítica, argumentativa y tu alto sentido de la justicia. Te gusta analizar las normas de forma profunda y posees la destreza persuasiva idónea para asesorar legalmente y defender los derechos humanos."
+        },
+        pedagogia: {
+            titulo: "Licenciatura en Pedagogía",
+            icono: "📚",
+            desc: "Cuentas con una gran empatía, paciencia y vocación para guiar el desarrollo de las personas. Eres excelente transmitiendo conocimientos y diseñando soluciones innovadoras para el sector de la educación y capacitación escolar o laboral."
+        }
+    };
+
+    // Aplicar los datos correspondientes en pantalla
+    if (infoCarreras[carrera]) {
+        titulo.innerText = infoCarreras[carrera].titulo;
+        icono.innerText = infoCarreras[carrera].icono;
+        descripcion.innerText = infoCarreras[carrera].desc;
+    }
+});
+</script>
 </body>
 </html>
